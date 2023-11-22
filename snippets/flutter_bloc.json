@@ -1,0 +1,25 @@
+{
+  "BlocBuilder": {
+    "prefix": "blocbuilder",
+    "body": [
+      "BlocBuilder<${1:Subject}${2|Bloc,Cubit|}, $1State>(",
+      "\tbuilder: (context, state) {",
+      "\t\treturn ${3:Container()};",
+      "\t},",
+      ")"
+    ]
+  },
+  "BlocSelector": {
+    "prefix": "blocselector",
+    "body": [
+      "BlocSelector<${1:Subject}${2|Bloc,Cubit|}, $1State, ${3:Selected}>(",
+      "\tselector: (state) {",
+      "\t\treturn ${4:state};",
+      "\t},",
+      "\tbuilder: (context, state) {",
+      "\t\treturn ${5:Container()};",
+      "\t},",
+      ")"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "Bloc": {
+    "prefix": "bloc",
+    "body": [
+      "class ${1:Subject}Bloc extends Bloc<$1Event, $1State> {",
+      "\t${1:Subject}Bloc() : super(${1:Subject}Initial()) {",
+      "\t\ton<$1Event>((event, emit) {",
+      "\t\t\t${2:// TODO: implement event handler}",
+      "\t\t});",
+      "\t}",
+      "}"
+    ]
+  },
+  "Bloc State": {
+    "prefix": "blocstate",
+    "body": [
+      "class ${1:Subject}${2:Verb}${3:State} extends $1State {",
+      "\tconst $1$2$3($5);",
+      "",
+      "\t$4",
+      "",
+      "\t@override",
+      "\tList<Object> get props => [$6];",
+      "}"
+    ],
+    "description": "Subject + Verb (action) + State"
+  },
+  "Bloc Event": {
+    "prefix": "blocevent",
+    "body": [
+      "class ${1:Subject}${2:Noun}${3:Verb} extends $1Event {",
+      "\tconst $1$2$3($5);",
+      "",
+      "\t$4",
+      "",
+      "\t@override",
+      "\tList<Object> get props => [$6];",
+      "}"
+    ],
+    "description": "Subject + Noun (optional) + Verb (event)"
+  }
+}
