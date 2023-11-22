@@ -6,10 +6,18 @@
   "engines": {
     "vscode": "^1.84.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marsbite/toke_bloc_extension"
+  },
   "categories": [
-    "Other"
+    "Snippets",
+    "Programming Languages"
   ],
-  "activationEvents": [],
+  "icon": "assets/logo.png",
+  "activationEvents": [
+    "workspaceContains:**/pubspec.yaml"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "configuration": [
