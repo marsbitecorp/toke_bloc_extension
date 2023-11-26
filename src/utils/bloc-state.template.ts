@@ -13,21 +13,15 @@ class ${pascalCaseBlocName}Loaded extends Loaded {
 class ${pascalCaseBlocName}State extends ITokeStates {
   ${pascalCaseBlocName}State._(super.union);
 
-  factory ${pascalCaseBlocName}State.unknown() {
-    return ${pascalCaseBlocName}State._(TokeState.initial());
-  }
+  factory ${pascalCaseBlocName}State.initial() => ${pascalCaseBlocName}State._(TokeState.initial());
 
-  factory ${pascalCaseBlocName}State.authenticating() {
-    return ${pascalCaseBlocName}State._(TokeState.loading());
-  }
+  factory ${pascalCaseBlocName}State.loading() => ${pascalCaseBlocName}State._(TokeState.loading());
 
-  factory ${pascalCaseBlocName}State.authenticated({required GoogleUser user}) {
-    return ${pascalCaseBlocName}State._(TokeState.loaded(state: ${pascalCaseBlocName}Loaded(user: user)));
-  }
+  factory ${pascalCaseBlocName}State.loaded() =>
+      ${pascalCaseBlocName}State._(TokeState.loaded(state: ${pascalCaseBlocName}Loaded()));
 
-  factory ${pascalCaseBlocName}State.failed({required String message}) {
-    return ${pascalCaseBlocName}State._(TokeState.failed(message: message));
-  }
+  factory ${pascalCaseBlocName}State.failed({required String message}) =>
+      ${pascalCaseBlocName}State._(TokeState.failed(message: message));
 }
 `;
 }
